@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matrix Puzzle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container" class="decorated-container">
+
+    <div class="decor-icon" style="top:8%; left:10%;">&#127810;</div>
+    <div class="decor-icon" style="top:82%; left:85%;">&#10024;</div>
+    <div class="decor-icon" style="top:42%; left:8%;">&#127793;</div>
+    <div class="decor-icon" style="top:15%; left:70%;">&#127810;</div>
+    <div class="decor-icon" style="top:66%; left:60%;">&#10024;</div>
+    <div class="decor-icon" style="top:18%; left:42%;">&#127793;</div>
+    <div class="decor-icon" style="top:55%; left:28%;">&#127810;</div>
+    <div class="decor-icon" style="top:75%; left:38%;">&#10024;</div>
+    <div class="decor-icon" style="top:5%; left:88%;">&#127793;</div>
+    <div class="decor-icon" style="top:60%; left:88%;">&#127810;</div>
+
+    <div id="leaderboard" aria-label="Leaderboard panel" role="complementary">
+      <h2 class="leaderboard-title">Leaderboard</h2>
+      <div id="leaderboard-info" class="leaderboard-info" aria-live="polite" aria-atomic="true">
+        <p>Select difficulty and size to see top solves</p>
+      </div>
+      <ol id="leaderboard-list" class="leaderboard-list" aria-live="polite" aria-relevant="additions" aria-atomic="true"></ol>
+    </div>
+
+    <div id="game-controls-and-play" class="game-controls-and-play">
+
+      <div id="size-selector" class="page">
+        <h1 class="headline">Select Difficulty Level</h1>
+        <div class="button-group" role="group" aria-label="Select difficulty level">
+          <button id="easy-btn" class="difficulty-btn" type="button">EASY</button>
+          <button id="medium-btn" class="difficulty-btn" type="button">MEDIUM</button>
+          <button id="hard-btn" class="difficulty-btn" type="button">HARD</button>
+        </div>
+
+        <h1 class="headline">Select Matrix Size</h1>
+        <div id="size-buttons" class="button-group" role="group" aria-label="Select matrix size 4 to 8"></div>
+
+        <button id="play-btn" disabled type="button">Play</button>
+      </div>
+
+      <div id="game-page" class="page hidden">
+        <h1 class="headline">CrossSum Matrix Challenge</h1>
+        <p class="madeby">- rohith sajeev</p>
+
+        <div id="timer" class="timer" aria-live="polite" aria-atomic="true">Time: 00:00:00</div>
+        <div id="wrong-moves" class="wrong-moves" aria-live="polite" aria-atomic="true"></div>
+
+        <div id="game-area" role="main" aria-label="Matrix puzzle game area">
+          <div id="matrix-with-row-sums" aria-live="polite" aria-atomic="true"></div>
+          <div id="col-sums-row" aria-live="polite" aria-atomic="true"></div>
+        </div>
+
+        <div id="message-area" role="alert" aria-live="assertive" class="message-area"></div>
+
+        <button id="restart-btn" class="hidden" type="button">Restart</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
